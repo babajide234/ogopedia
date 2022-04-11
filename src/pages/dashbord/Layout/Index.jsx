@@ -4,6 +4,7 @@ import { Route, Routes} from "react-router-dom";
 import Bills from '../Purchase/Bills';
 import Home from './../Home/Home';
 import Report from '../Analytics/Report/Report';
+import Error from './../Err/Error';
 
 const Layout = () => {
   return (
@@ -28,6 +29,7 @@ const Layout = () => {
                     <Route path="/" element={<Home/>}/>
                     <Route path="bills" element={<Bills/>}/>
                     <Route path="report" element={<Report/>}/>
+                    <Route path="*" element={<Error/>}/>
               </Routes>
               {/* <Outlet/> */}
             </div>

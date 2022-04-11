@@ -2,7 +2,13 @@ import React from 'react'
 
 const Home = () => {
   return (
-    <div>Home</div>
+    <>
+    
+      Home
+      <p className=" text-xl">
+        Only the purchase/bills and Analytics/reports have bult pages do well to navigate to them
+      </p>
+    </>
   )
 }
 
