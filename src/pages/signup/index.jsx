@@ -2,16 +2,21 @@ import React from 'react'
 import Inputs from '../../components/inputs/inputs'
 import Checkbox from './../../components/inputs/checkbox';
 import Bigbtn from './../../components/buttons/bigbtn';
+import { useNavigate } from 'react-router-dom';
 const Signup = () => {
     const style={
         background : 'url(./assets/signupbg.png)',
         backgroundSize: 'cover',
         backgrounPosition:'center',
     }
+    const navigate = useNavigate();
+    const toComponentB=()=>{
+        navigate('/dashboard');
+    }
   return (
       <div className=" flex w-screen overflow-hidden" >
           <div className="h-screen w-1/2 flex justify-center items-end " style={style}>
-              <p className="text-4xl text-white mb-58" style={{width:'449px'}}>
+              <p className="text-4xl text-white mb-58" style={{width:'449px',marginBottom:'100px'}}>
                 Building exceptional services with Back Office 
                 Support and Business Perfomance
               </p>
@@ -78,6 +83,7 @@ const Signup = () => {
                     <div className="mb-5">
                         <Bigbtn
                             text={`Sign Up`}
+                            onClick={toComponentB}
                         />
                     </div>
                     <div className="flex justify-center">
